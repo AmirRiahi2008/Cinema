@@ -4,8 +4,20 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm build:vercel",
   "outputDirectory": "dist-vercel",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "rewrites": [
+    {
+      "source": "/api/cinema/:path*",
+      "destination": "https://two-seats-amir.amirreza-riahi3311.chatgpt.site/api/cinema/:path*"
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "headers": [{
+    "source": "/api/cinema/:path*",
+    "headers": [
+      { "key": "Cache-Control", "value": "private, no-store" },
+      { "key": "x-vercel-enable-rewrite-caching", "value": "0" }
+    ]
+  }, {
     "source": "/(.*)",
     "headers": [
       { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
