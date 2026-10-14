@@ -1,0 +1,12 @@
+تنظیمات محیطی Vercel برای Production و Preview:
+
+ENABLE_EXPERIMENTAL_COREPACK=1
+VITE_CINEMA_API_ORIGIN=https://two-seats-amir.amirreza-riahi3311.chatgpt.site
+
+Corepack نسخه pnpm@11.25.0 تعیین‌شده در package.json را انتخاب می‌کند.
+
+Node.js Version: 24.x
+Framework: Vite
+Build Command: pnpm build:vercel
+Output Directory: dist-vercel
+Install Command: pnpm install --frozen-lockfile

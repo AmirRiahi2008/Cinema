@@ -1,0 +1,13 @@
+دو صندلی — نسخه آماده Vercel
+
+راهنمای مرحله‌به‌مرحله: README-VERCEL.md
+
+Framework: Vite
+Install: pnpm install --frozen-lockfile
+Build: pnpm build:vercel
+Output: dist-vercel
+Node: 24.x
+
+VITE_CINEMA_API_ORIGIN=https://two-seats-amir.amirreza-riahi3311.chatgpt.site
+
+رابط روی Vercel منتشر می‌شود و اتاق‌ها، چت و فیلم‌ها روی سرور Cloudflare فعلی می‌مانند. تنظیمات اتصال سرور منتشر و آماده شده‌اند.
